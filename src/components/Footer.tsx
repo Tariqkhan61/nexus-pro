@@ -93,8 +93,8 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-base text-gray-500">
-            © {new Date().getFullYear()} Nexus-Pro. All rights reserved.
-          </p>
+  © 2026 Nexus-Pro. All rights reserved.
+</p>
           <p className="text-base text-gray-500">
             Designed & Developed by{" "}
             <span className="font-extrabold text-brand-400">{owner.name}</span>
