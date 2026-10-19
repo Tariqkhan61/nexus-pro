@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { owner } from "@/lib/data";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -111,47 +112,28 @@ export default function Hero() {
           </motion.div>
 
           {/* Right — Visual Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Main Card */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-500 to-purple-600 shadow-2xl shadow-brand-500/40 rotate-6 hover:rotate-3 transition-transform duration-500" />
-              <div className="absolute inset-0 rounded-3xl bg-white dark:bg-gray-800 shadow-2xl p-8 flex flex-col justify-center">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center mb-6">
-                  <Sparkles className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Nexus-Pro
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  Premium digital solutions for modern brands.
-                </p>
-                <div className="space-y-3">
-                  {["Web Development", "UI/UX Design", "Digital Marketing"].map(
-                    (item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-3 text-sm font-medium text-gray-700 dark:text-gray-300"
-                      >
-                        <div className="w-2 h-2 rounded-full bg-brand-500" />
-                        {item}
-                      </div>
-                    )
-                  )}
-                </div>
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <p className="text-xs text-gray-500 mb-1">Founder</p>
-                  <p className="text-sm font-bold text-gray-900 dark:text-white">
-                    {owner.name}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="relative hidden lg:block"
+>
+  <div className="relative w-full aspect-square max-w-md mx-auto">
+    {/* Background Gradient Card (Peeche wala) */}
+    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-500 to-purple-600 shadow-2xl shadow-brand-500/40 rotate-6 hover:rotate-3 transition-transform duration-500" />
+    
+    {/* Screenshot Container (Aage wala) */}
+    <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+      <Image
+        src="/screenshot.jpg"
+        alt="Nexus-Pro Website Preview"
+        fill
+        className="object-cover object-top"
+        priority
+      />
+    </div>
+  </div>
+</motion.div>
         </div>
 
         {/* Scroll Indicator */}
