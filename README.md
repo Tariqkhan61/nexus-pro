@@ -12,7 +12,7 @@
 
 <img src="./assets/screenshot.jpg" alt="Nexus-Pro Preview" width="100%" style="border-radius: 10px;" />
 
-*(👆 Tip: Apna screenshot upload karke yahan link daal dein)*
+*(👆 https://nexus-pro-sandy.vercel.app/)
 
 </div>
 
