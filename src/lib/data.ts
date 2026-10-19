@@ -98,6 +98,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/blog", label: "Blog" },        // 👈 YEH LINE ADD KAREIN
   { href: "/contact", label: "Contact" },
 ];
 // === OWNER INFO ===
@@ -110,3 +111,46 @@ export const owner = {
   phone: "+92 300 1234567",
   location: "Lahore, Pakistan",
 };
+export type BlogPost = {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  category: string;
+};
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    slug: "why-your-business-needs-a-website",
+    title: "Why Your Business Needs a Website in 2026",
+    excerpt: "Aaj ke digital daur mein website sirf ek luxury nahi, balke business ki zaroorat hai. Janiye kyun.",
+    content: "Aaj ke daur mein agar aap ka business online nahi hai, toh aap apne customers ko kho rahe hain. Ek professional website aap ki 24/7 salesperson hoti hai. Is blog mein hum detail se batayenge ke website kaise aap ke business ko grow karti hai...",
+    date: "October 15, 2026",
+    author: "Muhammad Tariq Mahboob",
+    category: "Business",
+  },
+  {
+    id: 2,
+    slug: "top-5-web-design-trends",
+    title: "Top 5 Web Design Trends to Watch Out For",
+    excerpt: "Dark mode, glassmorphism aur AI-driven design. Janiye 2026 ke sabse popular web design trends.",
+    content: "Web design har saal change hota hai. 2026 mein dark mode, smooth animations aur minimal layouts ka daur hai. Is blog mein hum top 5 trends par baat karenge jo aap ki website ko modern banayenge...",
+    date: "October 10, 2026",
+    author: "Muhammad Tariq Mahboob",
+    category: "Design",
+  },
+  {
+    id: 3,
+    slug: "whatsapp-integration-for-business",
+    title: "How WhatsApp Integration Can Boost Your Sales",
+    excerpt: "Contact form se seedha WhatsApp par message. Janiye yeh feature aap ki sales kaise badha sakta hai.",
+    content: "WhatsApp duniya ka sabse bada messaging app hai. Agar aap ke website se log seedha WhatsApp par message bhej sakein, toh aap ki response time bohot fast ho jati hai...",
+    date: "October 5, 2026",
+    author: "Muhammad Tariq Mahboob",
+    category: "Marketing",
+  },
+];
